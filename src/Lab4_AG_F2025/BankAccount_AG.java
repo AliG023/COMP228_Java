@@ -15,15 +15,15 @@ public class BankAccount_AG extends User {
 		}
 	}
 
-	// Deposit Method Overloaded to take Int, Double or BigDecimal
-	public void deposit(int amount) {
-		balance = getBalance() + amount;
-		System.out.println("Your New Balance is: " + balance);
+	// Static Deposit Methods Overloaded to take Int, Double or BigDecimal
+	public static void deposit(BankAccount_AG account, int amount) {
+		account.balance = account.getBalance() + amount;
+		System.out.println("Your New Balance is: " + account.balance);
 	}
 
-	public void deposit(double amount) {
-		balance = getBalance() + amount;
-		System.out.println("Your New Balance is: " + balance);
+	public static void deposit(BankAccount_AG account, double amount) {
+		account.balance = account.getBalance() + amount;
+		System.out.println("Your New Balance is: " + account.balance);
 	}
 
 	public void deposit(BigDecimal amount) {
@@ -59,7 +59,7 @@ public class BankAccount_AG extends User {
 	@Override
 	public String toString() {
 		return "Account Number: " + accountNumber + " belongs to " + firstName + " " + lastName + " and the Balance= $"
-				+ balance;
+				+ String.format("%.2f", balance);
 	}
 
 }

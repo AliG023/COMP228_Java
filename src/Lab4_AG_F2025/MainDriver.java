@@ -63,7 +63,7 @@ public class MainDriver {
 			if (choice == 1) {
 				System.out.println("Deposit Amount for Account #1: ");
 				amount = scan.nextDouble();
-				Account1.deposit(amount);
+				BankAccount_AG.deposit(Account1, amount);
 			} else if (choice == 2) {
 				System.out.println("Withdraw Amount for Account #1: ");
 				amount = scan.nextDouble();
@@ -81,7 +81,7 @@ public class MainDriver {
 			if (choice == 1) {
 				System.out.println("Deposit Amount for Account #2: ");
 				amount = scan.nextDouble();
-				Account2.deposit(amount);
+				BankAccount_AG.deposit(Account2, amount);
 			} else if (choice == 2) {
 				System.out.println("Withdraw Amount for Account #2: ");
 				amount = scan.nextDouble();
@@ -99,7 +99,7 @@ public class MainDriver {
 			if (choice == 1) {
 				System.out.println("Deposit Amount for Account #3: ");
 				amount = scan.nextDouble();
-				Account3.deposit(amount);
+				BankAccount_AG.deposit(Account3, amount);
 			} else if (choice == 2) {
 				System.out.println("Withdraw Amount for Account #3: ");
 				amount = scan.nextDouble();
