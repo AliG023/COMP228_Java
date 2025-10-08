@@ -18,34 +18,34 @@ public class BankAccount_AG extends User {
 	// Static Deposit Methods Overloaded to take Int, Double or BigDecimal
 	public static void deposit(BankAccount_AG account, int amount) {
 		account.balance = account.getBalance() + amount;
-		System.out.println("Your New Balance is: " + account.balance);
+		System.out.println("Your New Balance is: " + String.format("%.2f", account.balance));
 	}
 
 	public static void deposit(BankAccount_AG account, double amount) {
 		account.balance = account.getBalance() + amount;
-		System.out.println("Your New Balance is: " + account.balance);
+		System.out.println("Your New Balance is: " + String.format("%.2f", account.balance));
 	}
 
-	public void deposit(BigDecimal amount) {
-		balance = BigDecimal.valueOf(getBalance()).add(amount).doubleValue();
-		System.out.println("Your New Balance is: " + balance);
+	public static void deposit(BankAccount_AG account, BigDecimal amount) {
+		account.balance = BigDecimal.valueOf(account.getBalance()).add(amount).doubleValue();
+		System.out.println("Your New Balance is: " + String.format("%.2f", account.balance));
 	}
 
 	// Withdraw Method Overloaded to take Int, Double or BigDecimal
 
 	public void withdraw(int amount) {
 		balance = getBalance() - amount;
-		System.out.println("Your New Balance Is: " + balance);
+		System.out.println("Your New Balance Is: " + String.format("%.2f", balance));
 	}
 
 	public void withdraw(double amount) {
 		balance = getBalance() - amount;
-		System.out.println("Your New Balance Is: " + balance);
+		System.out.println("Your New Balance Is: " + String.format("%.2f", balance));
 	}
 
 	public void withdraw(BigDecimal amount) {
 		balance = BigDecimal.valueOf(getBalance()).subtract(amount).doubleValue();
-		System.out.println("Your New Balance Is: " + balance);
+		System.out.println("Your New Balance Is: " + String.format("%.2f", balance));
 	}
 
 	// Get Balance Method
